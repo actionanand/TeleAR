@@ -1,0 +1,19 @@
+<h1 style="color:green;">Welcome to Anand Raja(AR)'s SS7 PC converter</h1>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+
+<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+
+<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+<%= form_for :telear, url: {action: :new },method: :get do |f| %>
+	<%= text_field_tag :a %>
+	<%= select_tag :operation, options_for_select([['Decimal to Binary', :d2b], ['Decimal to hexa', :d2h],['Decimal to Octal', :d2o], ['Decimal to Point code 7-7', :d2p], ['Point code 7-7 to Decimal', :p2d], ['Binary to Decimal', :b2d], ['Octal to Decimal', :o2d], ['Hexa to Decimal', :h2d]]) %>
+	<%= f.submit 'Calculate!' %>
+<% end %>
+<% unless @result.nil? %>
+
+<h1 style="color:darkgreen;"><label> <%= @result %> </label></h1>
+
+  <!-- <p> = <%= @result %> </p>-->
+<% end %>
