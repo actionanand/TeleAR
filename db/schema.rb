@@ -12,18 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_12_23_124942) do
 
-  create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.string "name"
-    t.string "player"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "picture_file_name"
-    t.string "picture_content_type"
-    t.bigint "picture_file_size"
-    t.datetime "picture_updated_at"
-  end
-
-  create_table "telears", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "telears", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
